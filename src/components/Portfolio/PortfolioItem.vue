@@ -20,12 +20,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>  
 .item {
 
     position: relative;
     &:focus {
         outline-color: $lblue;
+        z-index: 1000;
     }
     .overlay{
         position: absolute;
@@ -69,7 +70,7 @@ export default {
     }
 
 
-    &:hover .project-text {
+    &:hover .project-text, &:focus .project-text {
         transform: translateY(0%);
     }
 
