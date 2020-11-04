@@ -1,11 +1,11 @@
 <template>
     <header>
         <nav>
-            <a class="active" href="/">Work</a>
-            <a href="/about">About</a>
-            <Logo />
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
+            <router-link to="/">Work</router-link>
+            <router-link to="/about">About</router-link>
+            <router-link to="/"><Logo /></router-link>
+            <router-link to="/blog">Blog</router-link>
+            <router-link to="/contact">Contact</router-link>
         </nav>
     </header>
 </template>

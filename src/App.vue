@@ -1,20 +1,17 @@
 <template>
   <NavBar />
-  <Work />
+    <router-view></router-view>
   <Footer />
 </template>
 
 <script>
 import Footer from './components/UI/Footer.vue'
 import NavBar from './components/UI/NavBar.vue'
-import Work from './components/UI/Work.vue'
-
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    Work,
     Footer
   }
 }
