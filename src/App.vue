@@ -1,26 +1,75 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <NavBar />
+  <Work />
+  <Footer />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Footer from './components/UI/Footer.vue'
+import NavBar from './components/UI/NavBar.vue'
+import Work from './components/UI/Work.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    Work,
+    Footer
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700|Open+Sans&amp;display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $white;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h2 {
+    font-family: $primaryFont;
+    color: $dblue;
+
+    a {
+        color: $lblue;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+
+    @media (max-width: $phoneWidth) {
+        font-size: 18px;
+    }
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    @media (max-width: $phoneWidth) {
+        font-size: 16px;
+    }
+    &.intro-text {
+        @media (max-height: 641px) {
+            display: none;
+        }
+    }
+}
+
+:focus {
+    outline: $lblue 3px solid;
 }
 </style>
