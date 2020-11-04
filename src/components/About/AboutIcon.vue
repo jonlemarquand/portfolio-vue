@@ -1,8 +1,7 @@
 <template>
     <div className="about-item">
             <img className="about-icon" :src="require(`../../assets/icons/${iconSrc}.png`)" :alt="iconName" />
-            <p>{iconName}</p>
-        </div>
+    </div>
 </template>
 
 <script>

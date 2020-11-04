@@ -1,6 +1,8 @@
 <template>
   <NavBar />
-    <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
   <Footer />
 </template>
 
@@ -32,6 +34,25 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    height: 79vh;
+
+    @media (max-width: $phoneWidth) {
+        margin-top: 0;
+        height: auto;
+    }
+
+    @media (max-height: 900px) {
+        margin-top: 10px;
+    }
+
 }
 
 h1, h2 {
