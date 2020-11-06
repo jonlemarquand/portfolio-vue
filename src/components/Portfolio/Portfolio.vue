@@ -29,20 +29,30 @@
             stack="React"
             :title="item.title"
             :srcImage="item.gridImg"
+            @toggle-modal="handleModal"
         />
     </div>
+    <teleport to="body">
+        <Modal 
+            :shouldOpen="openModal"
+            @toggle-modal="handleModal"
+        />
+    </teleport>
 </template>
 
 <script>
 
 import PortfolioItem from './PortfolioItem';
+import Modal from '../UI/Modal';
 
 export default {
     components: {
-        PortfolioItem
+        PortfolioItem,
+        Modal
     },
     data() {
         return {
+            openModal: false,
             gridData: [
                 {
                     id: 1,
@@ -227,6 +237,9 @@ export default {
     methods: {
         stackRender(stack) {
             return stack.join(' / ');
+        },
+        handleModal() {
+            this.openModal = !this.openModal;
         }
     }
 }

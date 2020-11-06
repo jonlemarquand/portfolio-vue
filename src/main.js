@@ -9,7 +9,6 @@ import Portfolio from './components/Portfolio/Portfolio'
 import SocialIcon from './components/Shared/SocialIcon'
 
 const app = createApp(App);
-
 app.component('social-icon', SocialIcon);
 
 const router = createRouter({

@@ -1,5 +1,11 @@
 <template>
-    <div className="item" role="button" tabindex="0">
+    <div 
+        @click="toggleModal()" 
+        @keyup.enter="toggleModal()" 
+        className="item" 
+        role="button" 
+        tabindex="0"
+    >
         <img className="item-img" :src="require(`../../assets/gridImages/${srcImage}`)" :alt="title" />
         <div className="overlay">
             <div className="project-text pt-large">
@@ -16,6 +22,11 @@ export default {
         stack: String,
         title: String,
         srcImage: String
+    },
+    methods: {
+        toggleModal() {
+            this.$emit('toggle-modal')
+        }
     }
 }
 </script>
@@ -26,7 +37,7 @@ export default {
     position: relative;
     &:focus {
         outline-color: $lblue;
-        z-index: 1000;
+        z-index: 49;
     }
     .overlay{
         position: absolute;
