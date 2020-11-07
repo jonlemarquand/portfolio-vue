@@ -26,7 +26,7 @@
         <PortfolioItem 
             v-for="item in gridData" 
             :key="item.id" 
-            stack="React"
+            :stack="stackRender(item.stack)"
             :title="item.title"
             :srcImage="item.gridImg"
             @toggle-modal="handleModal"
