@@ -16,6 +16,9 @@
                     <social-icon v-if="modalData.live" name="weblink" :weblink="modalData.live"></social-icon>
                 </div>
             </div>
+            <div class="modalInfo">
+              <p v-for="(text, index) in modalData.infoText" :key="index">{{ text }}</p>
+            </div>
         </div>
     </div>
 </template>

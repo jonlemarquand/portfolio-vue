@@ -5,7 +5,7 @@ import App from './App.vue'
 import About from './components/About/About'
 import Blog from './components/Blog/Blog'
 import Contact from './components/Contact/Contact'
-import Portfolio from './components/Portfolio/Portfolio'
+import Work from './components/Work/Work'
 import SocialIcon from './components/Shared/SocialIcon'
 
 const app = createApp(App);
@@ -16,7 +16,7 @@ const router = createRouter({
     routes: [
     {
         path: '/',
-        component: Portfolio
+        component: Work
     },
     {
         path: '/about',
