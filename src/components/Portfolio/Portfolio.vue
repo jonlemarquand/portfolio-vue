@@ -29,12 +29,14 @@
             :stack="stackRender(item.stack)"
             :title="item.title"
             :srcImage="item.gridImg"
-            @toggle-modal="handleModal"
+            :itemId="item.id"
+            @toggle-modal="handleModalOpen"
         />
     </div>
     <teleport to="body">
         <Modal 
             :shouldOpen="openModal"
+            :modalData="modalData"
             @toggle-modal="handleModal"
         />
     </teleport>
@@ -53,6 +55,7 @@ export default {
     data() {
         return {
             openModal: false,
+            modalID: 1,
             gridData: [
                 {
                     id: 1,
@@ -172,7 +175,7 @@ export default {
                     filterStack: ["PHP", "SQL"],
                     gridImg: "adrianbailey.jpg",
                     live: "https://www.adrianbaileymp.com",
-                    github: "https://www.iknowmando.com",
+                    github: null,
                     imgOne: "adrianbailey.jpg",
                 },
                 {
@@ -187,7 +190,7 @@ export default {
                     filterStack: ["Branding", "Print"],
                     gridImg: "reports.jpg",
                     live: "https://www.transparency.org.uk",
-                    github: " ",
+                    github: null,
                     imgOne: "reports-display1.png",
                 },
                 {
@@ -202,7 +205,7 @@ export default {
                     filterStack: ["PHP", "SQL"],
                     gridImg: "ddweb.jpg",
                     live: "https://www.daviddevenish.com",
-                    github: "https://github.com/jonlemarquand/devenish",
+                    github: null,
                     imgOne: "ddweb.jpg",
                 },
                 {
@@ -216,8 +219,8 @@ export default {
                     stack: ["Print"],
                     filterStack: ["Print", "Branding"],
                     gridImg: "exhibition.jpg",
-                    live: " ",
-                    github: " ",
+                    live: null,
+                    github: null,
                     imgOne: "slide_ti253.jpg",
                 },
                 {
@@ -240,6 +243,24 @@ export default {
         },
         handleModal() {
             this.openModal = !this.openModal;
+        },
+        handleModalOpen(newId) {
+            this.modalID = newId-1;
+            this.handleModal()
+        }
+    },
+    computed: {
+        modalData: function() {
+            const newStack = this.stackRender(this.gridData[this.modalID].stack);
+            const newModalData = {
+                title: this.gridData[this.modalID].title,
+                infoText: this.gridData[this.modalID].title,
+                stack: newStack,
+                modalImg: this.gridData[this.modalID].title,
+                live: this.gridData[this.modalID].live,
+                github: this.gridData[this.modalID].github,
+            };
+            return newModalData;
         }
     }
 }

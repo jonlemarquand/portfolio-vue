@@ -21,11 +21,14 @@ export default {
     props: {
         stack: String,
         title: String,
-        srcImage: String
+        srcImage: String,
+        itemId: Number
     },
+    emits: ['toggle-modal', 'click'],
     methods: {
         toggleModal() {
-            this.$emit('toggle-modal')
+            const newId = this.itemId
+            this.$emit('toggle-modal', newId)
         }
     }
 }

@@ -8,12 +8,12 @@
         <div class="modal-text">
             <div class="modalTop">
                 <div>
-                    <div class="modalExplainer">React</div>
-                    <div class="modalTitle">Test</div>
+                    <div class="modalExplainer">{{ modalData.stack }}</div>
+                    <div class="modalTitle">{{ modalData.title }}</div>
                 </div>
                 <div class="link-icons">
-                    <!--<SocialIcon socialNetwork="github" socialLink={props.github}/>
-                    <SocialIcon socialNetwork="weblink" socialLink={props.livelink}/>-->
+                    <social-icon v-if="modalData.github" name="github" :weblink="modalData.github"></social-icon>
+                    <social-icon v-if="modalData.live" name="weblink" :weblink="modalData.live"></social-icon>
                 </div>
             </div>
         </div>
@@ -23,13 +23,15 @@
 <script>
 export default {
     props: {
-        shouldOpen: Boolean
+        shouldOpen: Boolean,
+        modalData: Object
     },
     methods: {
         toggleModal() {
             this.$emit('toggle-modal')
         }
-    }
+    },
+    emits: ["toggle-modal"],
 }
 </script>
 
