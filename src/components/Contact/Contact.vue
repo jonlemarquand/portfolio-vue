@@ -91,7 +91,7 @@ export default {
         font-weight: 700;
         font-size: 16px;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: $dblue;
             color: $white;
             border: 2px solid $dblue;
