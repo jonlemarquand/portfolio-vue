@@ -3,7 +3,7 @@
     <div v-if="shouldOpen" class="modal">
         <div @click="toggleModal()" class="exitCross">&times;</div>
         <div class="modal-img-container">
-            <!--<img src= alt="TI25" class="modal-img" />-->
+            <img :src="require(`../../assets/modalImages/${modalData.imgOne}`)" :alt="modalData.title" class="modal-img" />
         </div>
         <div class="modal-text">
             <div class="modalTop">
@@ -76,6 +76,7 @@ export default {
 
     @media (max-width: $phoneWidth) {
       width: 100%;
+      max-height: 50%;
     }
 }
 

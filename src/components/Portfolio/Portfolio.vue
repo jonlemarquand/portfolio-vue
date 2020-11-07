@@ -66,6 +66,7 @@ export default {
                     gridImg: "chordtheory.jpg",
                     live: "https://chordtheory.jonlemarquand.com",
                     github: "https://github.com/jonlemarquand/chord-memory",
+                    imgOne: "chordtheory-modal.jpg"
                 },
                 {
                     id: 2,
@@ -76,7 +77,7 @@ export default {
                     gridImg: "mando.jpg",
                     live: "https://www.iknowmando.com",
                     github: "https://github.com/jonlemarquand/mando-react",
-                    imgOne: "mando-display1.jpg",
+                    imgOne: "mando-modal.jpg"
                 },
                 {
                     id: 3,
@@ -87,7 +88,7 @@ export default {
                     gridImg: "quaver.jpg",
                     live: "https://quavermusic.jonlemarquand.com",
                     github: "https://www.iknowmando.com",
-                    imgOne: "quaver.jpg",
+                    imgOne: "quaver-modal.jpg"
                 },
                 {
                     id: 4,
@@ -98,7 +99,7 @@ export default {
                     gridImg: "abg.jpg",
                     live: "https://www.antibriberyguidance.org",
                     github: "https://github.com/jonlemarquand/abg-homepage",
-                    imgOne: "slide_abg1.jpg",
+                    imgOne: "abg-modal.jpg"
                 },
                 {
                     id: 5,
@@ -109,7 +110,7 @@ export default {
                     gridImg: "tencount.jpg",
                     live: "https://www.tencountstats.com",
                     github: "https://github.com/jonlemarquand/tencountapi",
-                    imgOne: "tencount.jpg",
+                    imgOne: "tencount-modal.jpg"
                 },
                 {
                     id: 6,
@@ -120,7 +121,7 @@ export default {
                     gridImg: "cpei.jpg",
                     live: "https://www.transparency.org.uk/cpei",
                     github: "https://github.com/jonlemarquand/cpei",
-                    imgOne: "cpei-display1.jpg",
+                    imgOne: "cpei-modal.jpg"
                 },
                 {
                     id: 7,
@@ -131,7 +132,7 @@ export default {
                     gridImg: "weshouldwatch.jpg",
                     live: "https://www.lpcl.jonlemarquand.com",
                     github: "https://www.iknowmando.com",
-                    imgOne: "lpcl-display1.png",
+                    imgOne: "weshouldwatch-modal.jpg"
                 },
                 {
                     id: 8,
@@ -142,7 +143,7 @@ export default {
                     gridImg: "adrianbailey.jpg",
                     live: "https://www.adrianbaileymp.com",
                     github: null,
-                    imgOne: "adrianbailey.jpg",
+                    imgOne: "adrianbailey-modal.jpg"
                 },
                 {
                     id: 9,
@@ -153,7 +154,7 @@ export default {
                     gridImg: "reports.jpg",
                     live: "https://www.transparency.org.uk",
                     github: null,
-                    imgOne: "reports-display1.png",
+                    imgOne: "reports-modal.jpg"
                 },
                 {
                     id: 10,
@@ -164,7 +165,7 @@ export default {
                     gridImg: "ddweb.jpg",
                     live: "https://www.daviddevenish.com",
                     github: null,
-                    imgOne: "ddweb.jpg",
+                    imgOne: "dd-modal.jpg"
                 },
                 {
                     id: 11,
@@ -175,7 +176,7 @@ export default {
                     gridImg: "exhibition.jpg",
                     live: null,
                     github: null,
-                    imgOne: "slide_ti253.jpg",
+                    imgOne: "exhibition-modal.jpg"
                 },
                 {
                     id: 12,
@@ -186,7 +187,7 @@ export default {
                     gridImg: "portfolio.jpg",
                     live: "https://www.jonlemarquand.com",
                     github: "https://github.com/jonlemarquand/react-portfolio",
-                    imgOne: "portfolio-display1.png",
+                    imgOne: "portfolio-modal.jpg"
                 }
             ]
         }
@@ -213,6 +214,7 @@ export default {
                 modalImg: this.gridData[this.modalID].title,
                 live: this.gridData[this.modalID].live,
                 github: this.gridData[this.modalID].github,
+                imgOne: this.gridData[this.modalID].imgOne
             };
             return newModalData;
         }
