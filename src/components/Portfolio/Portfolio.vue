@@ -91,8 +91,8 @@ export default {
                         <p>Starting with the backend, I began to develop a database schema featuring all the tables that were needed to compile the data, and then using a small batch of dummy data, inputted it to build the queries. Alongside this, I began to work on the Spotify/Apple Music data I had to turn them into readable JSON data.</p>
                         <p>Once the backend API was sorted, I began to build a front end in React, with the basic pages as well as a couple of test artist pages. The next challenge was to form automatically generating pages, with an artist image and stats, based on a query api address.</p>
                     </div>],
-                    stack: ["React", "Node"],
-                    filterStack: ["React", "Node", "Sass"],
+                    stack: ["Vue", "Node"],
+                    filterStack: ["Vue", "Node", "Sass"],
                     gridImg: "quaver.jpg",
                     live: "https://quavermusic.jonlemarquand.com",
                     github: "https://www.iknowmando.com",
@@ -137,8 +137,8 @@ export default {
                         <p>Transparency International UK developed the Corporate Political Engagement Index to measure what information 104 leading global companies make public about how they engage with politics and rank them based on this. To accompany the report that was produced, they also wanted a microsite to be launched, that would also incorporate an animated video explaining the results. It needed to include a filterable table of the results, along both the themes of the Index itself, as well as by the company groupings, so comparisons could be made between industries. Although the results table was mainly to be used by the public, as part of TI-UK’s work they also wanted to help businesses improve. Therefore, the brief also included a self-assessment quiz for companies that weren’t selected for the Index this time as well as best practice guidelines and a link to the full report.</p>
                         <p>After some initial discussions with the team (see above for sketched wireframes) I designed static versions of each screen of the one-page website. A one-page website felt most natural, as the information became more in depth as the user scrolled down. The microsite I developed for this project was originally built using Webflow. This had both highs and lows, in that it was easy to show  the client how the site was developing and make changes, however, the more technical side of the project (a self-assessment quiz) proved impossible to do in Webflow and so I rebuilt the site based on the layout, and incorporated the self-assessment quiz via SurveyMonkey, which the team were already using for monitoring other projects with businesses.</p>
                     </div>],
-                    stack: ["React"],
-                    filterStack: ["React", "Sass"],
+                    stack: ["Vue"],
+                    filterStack: ["Vue", "Sass"],
                     gridImg: "cpei.jpg",
                     live: "https://www.transparency.org.uk/cpei",
                     github: "https://github.com/jonlemarquand/cpei",
@@ -151,8 +151,8 @@ export default {
                         <p>‘Loving People, Changing Lives’ was an annual conference hosted at Woodside Church between 2015 - 2017. The brief for the design was to create a logo that would encompass the name of the conference, a programme to go with it, powerpoint slides and an online marketing campaign to encourage signups. The initial logo we used was a ‘stained glass heart’ made up of many colours and in a slightly distorted shape.</p>
                         <p>For the 2017 conference, I also drafted a spec of a microsite. However, as invitees were mostly internal signups from the church rather than external, it was decided to focus more on email marketing with direct links. I later built this site with React, as a personal project, integrating a signup form along with Stripe payment option. Although the customisation of the site is nice, the extra work, for a comparatively small event (around 300 people), on top of other responsibilities, would be better handled by Eventbrite or something similar.</p>
                     </div>],
-                    stack: ["React"],
-                    filterStack: ["React", "Branding", "Sass"],
+                    stack: ["Vue", "Node"],
+                    filterStack: ["Vue", "Node", "Sass"],
                     gridImg: "weshouldwatch.jpg",
                     live: "https://www.lpcl.jonlemarquand.com",
                     github: "https://www.iknowmando.com",
@@ -168,8 +168,8 @@ export default {
                         <p>Overall, it was a successful website that allowed constituents to get in touch with Adrian easier and see what he was doing for them.</p>
                         <p><em>Note: Adrian Bailey is now no longer the MP for West Bromwich West having decided to step down at the December 2019 election, thus the site is no longer live, having previously been updated around July 2018.</em></p>
                     </div>],
-                    stack: ["Laravel", "PostgreSQL"],
-                    filterStack: ["Laravel", "PHP", "SQL"],
+                    stack: ["Wordpress"],
+                    filterStack: ["PHP", "SQL"],
                     gridImg: "adrianbailey.jpg",
                     live: "https://www.adrianbaileymp.com",
                     github: "https://www.iknowmando.com",
@@ -198,8 +198,8 @@ export default {
                         <p>At the beginning of the project, Wordpress seemed like the obvious solution to the issue of ever-changing content. As I wouldn’t be continually updating the site with new content, instead a communications officer at the organisation would be, it needed a user-friendly experience for someone with minimal experience in web development. To enable this to function, I developed an easy to use interface where the user would simply have to copy/paste the YouTube/ Vimeo/ Soundcloud link as well as the accompanying text and header image and they would have a post.</p>
                         <p>Since launch, the site has been updated by a couple of people, and so doesn’t quite look like my initial designs, although it seems the same functionality has remained.</p>
                     </div>],
-                    stack: ["Laravel", "PostgreSQL"],
-                    filterStack: ["Laravel", "PHP", "SQL"],
+                    stack: ["Wordpress"],
+                    filterStack: ["PHP", "SQL"],
                     gridImg: "ddweb.jpg",
                     live: "https://www.daviddevenish.com",
                     github: "https://github.com/jonlemarquand/devenish",
@@ -224,8 +224,8 @@ export default {
                     id: 12,
                     title: "Portfolio",
                     infoText: [<div className="modalInfo"><p>A web developer’s portfolio is often the hardest thing to get right. Everyone is aware that it’s a means to an end, in displaying the projects and code worked on, but with an opportunity to show a personal flare and style. To that end, this portfolio went through several iterations before settling on using a simple React App to display projects in a modal, along with an about, a blog and a contact form.</p></div>],
-                    stack: ["React"],
-                    filterStack: ["React"],
+                    stack: ["Vue"],
+                    filterStack: ["Vue"],
                     gridImg: "portfolio.jpg",
                     live: "https://www.jonlemarquand.com",
                     github: "https://github.com/jonlemarquand/react-portfolio",
