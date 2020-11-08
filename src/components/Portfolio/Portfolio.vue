@@ -1,26 +1,62 @@
 <template>
     <div class="portfolio-options">
         <p>Filter By:</p>
-        <input type="radio" name="options" value="all" id="all" checked/>
-        <label for="all">All</label>
-        <input type="radio" name="options" value="vue" id="vue"/>
-        <label for="vue">Vue</label>
-        <input type="radio" name="options" value="react" id="react"/>
-        <label for="react">React</label>
-        <input type="radio" name="options" value="laravel" id="laravel"/>
-        <label for="laravel">Laravel</label>
-        <input type="radio" name="options" value="sql" id="sql"/>
-        <label for="sql">SQL</label>
-        <input type="radio" name="options" value="nosql" id="nosql"/>
-        <label for="nosql">NoSQL</label>
-        <input type="radio" name="options" value="php" id="php"/>
-        <label for="php">PHP</label>
-        <input type="radio" name="options" value="sass" id="sass"/>
-        <label for="sass">Sass</label>
-        <input type="radio" name="options" value="branding" id="branding"/>
-        <label for="branding">Branding</label>
-        <input type="radio" name="options" value="print" id="print"/>
-        <label for="print">Print</label>
+        <div class="filter-options">            
+            <input type="radio" name="options" value="all" id="all" v-model="activeFilter" />
+            <label  for="all">All</label>
+        </div>
+        <div class="filter-options">
+            <input type="radio" name="options" value="Vue" id="vue" v-model="activeFilter"/>
+            <label for="vue">Vue</label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="React" id="react" v-model="activeFilter"/>
+        <label for="react">
+            React
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="Laravel" id="laravel" v-model="activeFilter"/>
+        <label for="laravel">        
+            Laravel
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="SQL" id="sql" v-model="activeFilter"/>
+        <label for="sql">
+            SQL
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="NoSQL" id="nosql" v-model="activeFilter"/>
+        <label for="nosql">
+            NoSQL
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="PHP" id="php" v-model="activeFilter"/>
+        <label for="php">
+            PHP
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="Sass" id="sass" v-model="activeFilter"/>
+        <label for="sass">
+            Sass
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="Branding" id="branding" v-model="activeFilter"/>
+        <label  for="branding">
+            Branding
+        </label>
+        </div>
+        <div class="filter-options">
+                        <input type="radio" name="options" value="Print" id="print" v-model="activeFilter"/>
+        <label for="print">
+            Print
+        </label>
+        </div>
     </div>
     <div class="portfolio-grid">
         <PortfolioItem 
@@ -31,6 +67,7 @@
             :srcImage="item.gridImg"
             :itemId="item.id"
             @toggle-modal="handleModalOpen"
+            :shouldShow="showItem(item.filterStack)"
         />
     </div>
     <teleport to="body">
@@ -56,6 +93,7 @@ export default {
         return {
             openModal: false,
             modalID: 1,
+            activeFilter: 'all',
             gridData: [
                 {
                     id: 1,
@@ -73,7 +111,7 @@ export default {
                     title: "I Know Mando",
                     infoText: ["The mandolin has a rich history in some songs you’ve probably never heard of, and also Maggie May. On the other hand, if like me, you’re learning the mandolin, you’ll find it difficult to find a site that puts chords, scales and arpeggios together to learn… until now. Enter: I Know Mando.", "The project began by sorting out the Fretboard of a Mandolin using CSS Grid. I did this because grid makes it easy to change around the layout (for alternate tunings or positions) as well as quickly allowing you to reference a specific fret. It’s also responsive which is a great help when wanting the website to be accessible on phones.","Well, I initially only had plans to use it myself, so I went down the javascript route, figuring if I could get all the info in, that would almost be the project complete. The site’s Javascript is fairly straight forward, with IF statements running if a change is detected on the buttons. From there, the script first hides all the circles (undoing the previous switch), and then runs the chord notes to add them back in. This allows very quick changes to be made, all within the same CSS grid.","Version 1 currently runs well, but is not as straight forward to input more options (such as positions), so a version built with React is also being developed."],
                     stack: ["React"],
-                    filterStack: ["React, Sass"],
+                    filterStack: ["React", "Sass"],
                     gridImg: "mando.jpg",
                     live: "https://www.iknowmando.com",
                     github: "https://github.com/jonlemarquand/mando-react",
@@ -202,6 +240,14 @@ export default {
         handleModalOpen(newId) {
             this.modalID = newId-1;
             this.handleModal()
+        },
+        showItem(filterStack) {
+            console.log(this.activeFilter);
+            if (filterStack.includes(this.activeFilter) || this.activeFilter === 'all') {
+                return true
+            } else {
+                return false
+            }
         }
     },
     computed: {
@@ -225,8 +271,55 @@ export default {
 <style lang="scss" scoped>
     .portfolio-options {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        max-width: 1200px;
+
+        p {
+            font-family: $secondaryFont;
+            color: $dblue;
+
+            @media (max-height: 670px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: $phoneWidth) {
+                max-width: $phoneWidth;
+                justify-content: center;
+        }
     }
+
+    .filter-options {
+
+        color: $dblue;
+        font-family: $primaryFont;
+        font-weight: 700;
+        padding: 4px 5px 5px 5px;
+        margin: 0 5px;
+        display: flex;
+        flex-direction: column;
+
+        input:checked + label {
+            color: $lblue;
+        }
+
+        &:hover, label:hover {
+            color: $lblue;
+            cursor: pointer;
+        }
+
+        &:focus-within {
+            outline: 3px $lblue solid;
+        }
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
     .portfolio-grid {
         display: grid;
         max-width: 1200px;

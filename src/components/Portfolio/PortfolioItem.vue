@@ -5,6 +5,7 @@
         className="item" 
         role="button" 
         tabindex="0"
+        v-if="shouldShow"
     >
         <img className="item-img" :src="require(`../../assets/gridImages/${srcImage}`)" :alt="title" />
         <div className="overlay">
@@ -22,7 +23,8 @@ export default {
         stack: String,
         title: String,
         srcImage: String,
-        itemId: Number
+        itemId: Number,
+        shouldShow: Boolean
     },
     emits: ['toggle-modal', 'click'],
     methods: {
