@@ -5,6 +5,7 @@
             <div className="skillsbox">
                     <h2>Front-End</h2>
                     <div className="skillsline">
+                        <AboutIcon iconName="Vue" iconSrc="vue" />
                         <AboutIcon iconName="React" iconSrc="react"/>
                     </div>
                     <div className="skillsline">
@@ -20,6 +21,7 @@
                 <div className="skillsbox">
                 <h2>Back-End</h2>
                 <div className="skillsline">
+                        <AboutIcon iconName="Laravel" iconSrc="laravel"/>                     
                         <AboutIcon iconName="Node" iconSrc="nodejs"/>
                         <AboutIcon iconName="ExpressJS" iconSrc="express"/>
                         <AboutIcon iconName="PHP" iconSrc="php"/>

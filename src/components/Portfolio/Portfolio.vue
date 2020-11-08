@@ -338,7 +338,7 @@ export default {
             grid-template-rows: repeat(4, 81px);
             margin-top: 20px;
         }
-        @media (max-height: 801px) and (min-width: 600px) {
+        @media (max-height: 901px) and (min-width: 600px) {
             grid-template-columns: repeat(4, 210px);
             grid-template-rows: repeat(3, 162px);
             margin-top: 20px;
