@@ -108,14 +108,14 @@ export default {
                 },
                 {
                     id: 2,
-                    title: "I Know Mando",
-                    infoText: ["The mandolin has a rich history in some songs you’ve probably never heard of, and also Maggie May. On the other hand, if like me, you’re learning the mandolin, you’ll find it difficult to find a site that puts chords, scales and arpeggios together to learn… until now. Enter: I Know Mando.", "The project began by sorting out the Fretboard of a Mandolin using CSS Grid. I did this because grid makes it easy to change around the layout (for alternate tunings or positions) as well as quickly allowing you to reference a specific fret. It’s also responsive which is a great help when wanting the website to be accessible on phones.","Well, I initially only had plans to use it myself, so I went down the javascript route, figuring if I could get all the info in, that would almost be the project complete. The site’s Javascript is fairly straight forward, with IF statements running if a change is detected on the buttons. From there, the script first hides all the circles (undoing the previous switch), and then runs the chord notes to add them back in. This allows very quick changes to be made, all within the same CSS grid.","Version 1 currently runs well, but is not as straight forward to input more options (such as positions), so a version built with React is also being developed."],
-                    stack: ["React"],
-                    filterStack: ["React", "Sass"],
-                    gridImg: "mando.jpg",
-                    live: "https://www.iknowmando.com",
-                    github: "https://github.com/jonlemarquand/mando-react",
-                    imgOne: "mando-modal.jpg"
+                    title: "We Should Watch",
+                    infoText: ["One person creates a room, the other joins and then both are given 20 programmes from a list of streaming services and swipe left or right depending on whether they’re interested in it. The results only show the programmes that are agreed upon.","Built with a React frontend, Node backend and Redis and PostgreSQL databases; We Should Watch uses a Redis database to quickly store temporary data, such as the current users and their settings, before committing the data permanently to postgres.","The next expansion of ‘We Should Watch’ seeks to add more programmes/films from more streaming services as well as a multi-person room which will either show the programmes matched or the stats on which was the closest."],
+                    stack: ["Vue", "Node"],
+                    filterStack: ["Vue", "Node", "Sass"],
+                    gridImg: "weshouldwatch.jpg",
+                    live: "https://www.lpcl.jonlemarquand.com",
+                    github: "https://www.iknowmando.com",
+                    imgOne: "weshouldwatch-modal.jpg"
                 },
                 {
                     id: 3,
@@ -163,14 +163,14 @@ export default {
                 },
                 {
                     id: 7,
-                    title: "We Should Watch",
-                    infoText: ["‘Loving People, Changing Lives’ was an annual conference hosted at Woodside Church between 2015 - 2017. The brief for the design was to create a logo that would encompass the name of the conference, a programme to go with it, powerpoint slides and an online marketing campaign to encourage signups. The initial logo we used was a ‘stained glass heart’ made up of many colours and in a slightly distorted shape.","For the 2017 conference, I also drafted a spec of a microsite. However, as invitees were mostly internal signups from the church rather than external, it was decided to focus more on email marketing with direct links. I later built this site with React, as a personal project, integrating a signup form along with Stripe payment option. Although the customisation of the site is nice, the extra work, for a comparatively small event (around 300 people), on top of other responsibilities, would be better handled by Eventbrite or something similar."],
-                    stack: ["Vue", "Node"],
-                    filterStack: ["Vue", "Node", "Sass"],
-                    gridImg: "weshouldwatch.jpg",
-                    live: "https://www.lpcl.jonlemarquand.com",
-                    github: "https://www.iknowmando.com",
-                    imgOne: "weshouldwatch-modal.jpg"
+                    title: "I Know Mando",
+                    infoText: ["The mandolin has a rich history in some songs you’ve probably never heard of, and also Maggie May. On the other hand, if like me, you’re learning the mandolin, you’ll find it difficult to find a site that puts chords, scales and arpeggios together to learn… until now. Enter: I Know Mando.", "The project began by sorting out the Fretboard of a Mandolin using CSS Grid. I did this because grid makes it easy to change around the layout (for alternate tunings or positions) as well as quickly allowing you to reference a specific fret. It’s also responsive which is a great help when wanting the website to be accessible on phones.","The initial javascript version ran with IF statements running if a change is detected on the buttons. From there, the script first hides all the circles (undoing the previous switch), and then runs the chord notes to add them back in. Very quick, but slightly inefficient.","Since then, I have rebuilt the site with React, enabling more complex features to be added easier, as well as simplifying the data structure."],
+                    stack: ["React"],
+                    filterStack: ["React", "Sass"],
+                    gridImg: "mando.jpg",
+                    live: "https://www.iknowmando.com",
+                    github: "https://github.com/jonlemarquand/mando-react",
+                    imgOne: "mando-modal.jpg"
                 },
                 {
                     id: 8,
