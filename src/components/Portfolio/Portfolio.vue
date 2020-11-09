@@ -100,7 +100,7 @@ export default {
                     title: "Chord Theory",
                     infoText: ["To the horror of, I assume most ‘hardcore’ jazz fans, I started listening to the genre after watching ‘La La Land’. As part of it, I wanted to take the piano skills I already had and expand them to playing jazz piano. So, I bought a book filled with complicated chords and complex melodies and then forgot about it for a while, picking it back up in 2020 in a not-new-years resolution. To help learn chords when not at the piano, I created a little guess the right answer game: Chord Theory.", "However, jazz has a lot to it. One question set wouldn’t be enough, and so after initially just creating a javascript game, I decided to expand it to be built with react and node, as well as a PostgreSQL database to store user info (such as stats on how many right answers a user got) and redis for additional security in signing people in with tokens."],
                     stack: ["React", "Node", "PostgreSQL"],
-                    filterStack: ["React", "Node", "Express", "SQL", "NoSQL", "Sass"],
+                    filterStack: ["React", "Laravel", "Express", "SQL", "NoSQL", "Sass"],
                     gridImg: "chordtheory.jpg",
                     live: "https://chordtheory.jonlemarquand.com",
                     github: "https://github.com/jonlemarquand/chord-memory",
@@ -121,8 +121,8 @@ export default {
                     id: 3,
                     title: "Quaver Music",
                     infoText: ["After successfully putting in a GDPR request to Spotify, in a curious effort to see what data they were storing about me, I was given, along with what brand of bluetooth headphones I was listening through, my listening data since 2012ish. When combined with the results from iTunes/Apple Music after brief dabbling, I wanted some way to visualise what I had been listening to. This seemed like it would be a good opportunity to use SQL, node.js and react to create a site that would let me see trends in my music options.","Starting with the backend, I began to develop a database schema featuring all the tables that were needed to compile the data, and then using a small batch of dummy data, inputted it to build the queries. Alongside this, I began to work on the Spotify/Apple Music data I had to turn them into readable JSON data.","Once the backend API was sorted, I began to build a front end in React, with the basic pages as well as a couple of test artist pages. The next challenge was to form automatically generating pages, with an artist image and stats, based on a query api address."],
-                    stack: ["Vue", "Node"],
-                    filterStack: ["Vue", "Node", "Sass"],
+                    stack: ["Vue", "Laravel"],
+                    filterStack: ["Vue", "Laravel", "Sass"],
                     gridImg: "quaver.jpg",
                     live: "https://quavermusic.jonlemarquand.com",
                     github: "https://www.iknowmando.com",
@@ -143,8 +143,8 @@ export default {
                     id: 5,
                     title: "TenCount",
                     infoText: ["Ever since the days of Stone Cold and the Rock, I’ve been a fan of pro wrestling. One of the things I noticed is that although Opta exists for a lot of sports, there doesn’t seem to be a pro wrestling equivalent. Smelling an opportunity, I decided to create TenCount stats, starting with All Elite Wrestling (AEW). AEW launched in 2019, so provided an easy entry point into recording stats, with a limited number of shows already taking place.", "The plan was to initially create a backend in Node/PostgreSQL, that could run queries that could be turned into social media posts. Once a bit of a following was built up, a react website displaying more stats would be available. To do this, I drew a database schema out, with the different tables that were needed, as well as the foreign keys between them. After that, I used some dummy data to create the different API endpoints needed for the Node App.", "The current functionality of the backend, allows me to use common API endpoints to regularly update data, for example to see wins/losses, as well as write more customisable queries for more specialised data.", "The React frontend is still currently in development."],
-                    stack: ["Node", "PostgreSQL"],
-                    filterStack: ["Node", "SQL", "Sass"],
+                    stack: ["Laravel", "PostgreSQL"],
+                    filterStack: ["Laravel", "SQL", "Sass"],
                     gridImg: "tencount.jpg",
                     live: "https://www.tencountstats.com",
                     github: "https://github.com/jonlemarquand/tencountapi",
@@ -158,7 +158,7 @@ export default {
                     filterStack: ["Vue", "Sass"],
                     gridImg: "cpei.jpg",
                     live: "https://www.transparency.org.uk/cpei",
-                    github: "https://github.com/jonlemarquand/cpei",
+                    github: "https://github.com/jonlemarquand/cpei-vue",
                     imgOne: "cpei-modal.jpg"
                 },
                 {
@@ -224,7 +224,7 @@ export default {
                     filterStack: ["Vue"],
                     gridImg: "portfolio.jpg",
                     live: "https://www.jonlemarquand.com",
-                    github: "https://github.com/jonlemarquand/react-portfolio",
+                    github: "https://github.com/jonlemarquand/portfolio-vue",
                     imgOne: "portfolio-modal.jpg"
                 }
             ]
