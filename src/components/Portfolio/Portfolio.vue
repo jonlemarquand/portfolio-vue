@@ -157,7 +157,7 @@ export default {
                     stack: ["Vue"],
                     filterStack: ["Vue", "Sass"],
                     gridImg: "cpei.jpg",
-                    live: "https://www.transparency.org.uk/cpei",
+                    live: "https://www.transparency.org.uk/corporate-political-engagement-index",
                     github: "https://github.com/jonlemarquand/cpei-vue",
                     imgOne: "cpei-modal.jpg"
                 },
